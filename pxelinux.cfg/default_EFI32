@@ -1,0 +1,97 @@
+PATH /efi32/
+DEFAULT vesamenu.c32
+
+#Erlaubt das BOOT Prompt	
+PROMPT       0
+
+NOESCAPE     0
+ALLOWOPTIONS 1
+
+MENU INCLUDE pxelinux.cfg/GFX_EFI32.conf
+MENU TITLE Synology DS: PXELINUX 6.04 EFI32 MENU
+MENU AUTOBOOT Starte das Lokale Betriebssystem in # Sekunden
+MENU TABMSG [TAB] zum Anpassen der Einstellungen.
+MENU PASSPROMPT Passwort erforderlich!
+TIMEOUT 300
+TOTALTIMEOUT 9000
+
+f1 pxelinux.cfg/f1.txt
+f2 pxelinux.cfg/f2.txt
+
+#Deutsches Tastaturlayout
+KBDMAP german.kbd
+
+##############################################################
+# CONFIG SECTION                                             #
+##############################################################
+
+
+
+##############################################################
+#SYSTEM SECTION
+##############################################################
+LABEL W4
+
+	MENU LABEL System:
+	MENU DISABLE
+
+LABEL local 
+	MENU DEFAULT
+	MENU LABEL - Von Lokaler Festplatte booten HDD 0 Partition 0
+	MENU INDENT 1
+	COM32 chain.c32
+	APPEND hd0 0
+TEXT HELP
+Bootet von der lokalen Festplatte.
+ENDTEXT
+
+LABEL reboot
+	MENU LABEL - System neusta^rten
+	MENU INDENT 1
+	COM32 reboot.c32
+TEXT HELP
+Starten Sie das System neu. Alternativ druecken Sie den RESET Knopf an
+Ihrem Rechner.
+ENDTEXT
+
+LABEL PXESettings
+
+	MENU LABEL PXE Einstellungen:
+	MENU DISABLE
+
+LABEL TextMode
+	MENU LABEL - PXELinux im Textmodus
+	MENU INDENT 1
+	KERNEL menu.c32
+	APPEND pxelinux.cfg/default_EFI32
+TEXT HELP
+Schaltet die PXELinux Oberflaeche in den Textmodus.
+ENDTEXT
+
+LABEL GUIMode
+	MENU LABEL - PXELinux im Grafikmodus (Default)
+	MENU INDENT 1
+	KERNEL vesamenu.c32
+	APPEND pxelinux.cfg/default_EFI32
+TEXT HELP
+Schaltet die PXELinux Oberflaeche in den Grafikmodus.
+ENDTEXT
+
+
+##############################################################
+#INFO SECTION
+##############################################################
+LABEL W5
+
+	MENU LABEL Informationen:
+	MENU DISABLE
+
+LABEL F1
+	MENU LABEL - [F1] Hilfe Anzeigen
+	MENU INDENT 1	
+	MENU HELP pxelinux.cfg/f1.txt
+	
+LABEL F2
+	MENU LABEL - [F2] PXE Bootloader Version
+	MENU INDENT 1	
+	MENU HELP pxelinux.cfg/f2.txt

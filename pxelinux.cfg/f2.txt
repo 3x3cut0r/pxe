@@ -1,0 +1,14 @@
+Hilfe F2: Dieser PXE Bootloader wurde von Stefan Saft erstellt. 
+------------------------------------------------------------------------------
+Letzte Aktualisierung: 07.08.2016
+Version: 1.1
+
+
+Syslinux Version: 6.0.4
+https://www.kernel.org/pub/linux/utils/boot/syslinux/
+
+WinPE Version: 6.0 (Windows 10 Build 1607)
+
+Windows ADK (Windows Assessment and Deployment Kit)
+
+Wuensche zum aufnehmen weiterer Pakete bitte an Stefan Saft senden.

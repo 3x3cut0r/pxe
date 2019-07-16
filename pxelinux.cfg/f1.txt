@@ -1,0 +1,10 @@
+Hilfe F1: Navigation innerhalb der Bereiche!
+------------------------------------------------------------------------------
+
+Sie navigieren mit den Pfeiltasten und oeffnen Programme mit der ENTER Taste. 
+
+Mit der ESC Taste verlassen Sie Untermenues wieder.
+
+Ueber die TAB Taste koennen die Befehlzeilen editiert werden.
+
+Nach 15 Minuten inaktivitaet wird automatisch von der lokalen HDD gebootet.
