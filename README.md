@@ -15,7 +15,7 @@ Changelogs:
 https://wiki.syslinux.org/wiki/index.php?title=Syslinux_6_Changelog  
   
 ### Kit-Coding.de
-https://www.kit-coding.de/2018/12/24/synology-dsm-6-0-syslinux-6-04-ubtuntu-und-mint-live-systeme-starten/  
+https://web.archive.org/web/20170511035552/http://www.kit-coding.de/include.php?path=article&contentid=649  
   
 ### Synology-Wiki.de
 HowTo PXE für Synology Diskstations:  
