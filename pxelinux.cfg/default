@@ -8,7 +8,7 @@ NOESCAPE     0
 ALLOWOPTIONS 1
 
 MENU INCLUDE pxelinux.cfg/GFX_BIOS.conf
-MENU TITLE Synology DS: PXELINUX 6.04 BIOS MENU
+MENU TITLE Synology DS: PXELINUX BIOS MENU
 MENU AUTOBOOT Starte das Lokale Betriebssystem in # Sekunden
 MENU TABMSG [TAB] zum Anpassen der Einstellungen.
 MENU PASSPROMPT Passwort erforderlich!
@@ -25,6 +25,7 @@ KBDMAP german.kbd
 # CONFIG SECTION                                             #
 ##############################################################
 
+# Hier die Eintraege/Configs hinzufuegen:
 
 ##############################################################
 # SYSTEM SECTION                                             #
