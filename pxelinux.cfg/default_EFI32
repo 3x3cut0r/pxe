@@ -3,7 +3,6 @@ DEFAULT vesamenu.c32
 
 #Erlaubt das BOOT Prompt	
 PROMPT       0
-
 NOESCAPE     0
 ALLOWOPTIONS 1
 
